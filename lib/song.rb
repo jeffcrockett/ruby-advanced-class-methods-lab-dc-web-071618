@@ -36,7 +36,7 @@ class Song
   end
 
   def self.alphabetical
-    @@all.sort_by{|song| song.name.downcase.split('').map{|x| @@alphabet.index[x] }}
+    @@all.sort_by{|song| song.name.downcase.split('').map{|x| @@alphabet.index(x) }}
   end
 
   def self.find_by_name(name)
