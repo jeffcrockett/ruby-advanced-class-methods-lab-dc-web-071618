@@ -34,7 +34,7 @@ class Song
     @@all.clear
   end
 
-  def alphbetical
+  def self.alphbetical
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     @@all.sort_by{|song| song.name.downcase.split().map{|x| alphabet.index[x] }}
   end
