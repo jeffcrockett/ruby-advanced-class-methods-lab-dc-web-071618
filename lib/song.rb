@@ -32,5 +32,5 @@ class Song
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     @@all.sort_by{|song| song.name.downcase.split().map{|x| alphabet.index[x] }}
   end
-binding.pry
+# binding.pry
 end
