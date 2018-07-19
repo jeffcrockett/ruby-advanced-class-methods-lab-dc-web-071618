@@ -38,5 +38,9 @@ class Song
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     @@all.sort_by{|song| song.name.downcase.split().map{|x| alphabet.index[x] }}
   end
+
+  def self.find_by_name(name)
+    @@all.find do |song| song.name == name end 
+  end
 # binding.pry
 end
