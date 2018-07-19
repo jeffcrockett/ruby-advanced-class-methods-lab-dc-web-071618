@@ -44,10 +44,10 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    unless Song.find_by_name(name)
-      return Song.create(name)
+    unless self.find_by_name(name)
+      return self.create(name)
     else
-      return Song.find_by_name(name)
+      return self.find_by_name(name)
     end
   end
 # binding.pry
