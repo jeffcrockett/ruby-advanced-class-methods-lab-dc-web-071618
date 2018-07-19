@@ -37,7 +37,6 @@ class Song
 
   def self.alphabetical
     @@all.sort_by{|song| song.name.downcase.split('').map{|x| @@alphabet.index[x] }}
-
   end
 
   def self.find_by_name(name)
@@ -51,7 +50,7 @@ class Song
       return self.find_by_name(name)
     end
   end
-# binding.pry
+binding.pry
 
   def self.new_from_filename(filename)
     parsed_filename = filename.split(' - ')
