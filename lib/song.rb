@@ -40,7 +40,15 @@ class Song
   end
 
   def self.find_by_name(name)
-    @@all.find do |song| song.name == name end 
+    @@all.find do |song| song.name == name end
+  end
+
+  def find_or_create_by_name(name)
+    unless Song.find_by_name(name)
+      return Song.create(name)
+    else
+      return Song.find_by_name(name)
+    end
   end
 # binding.pry
 end
