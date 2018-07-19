@@ -3,6 +3,7 @@ require 'pry'
 class Song
   attr_accessor :name, :artist_name
   @@all = []
+  @@alphabet ='abcdefghijklmnopqrstuvwxyz'
 
   def self.all
     @@all
@@ -35,8 +36,7 @@ class Song
   end
 
   def self.alphabetical
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    @@all.sort_by{|song| song.name.downcase.split.map{|x| alphabet.index[x] }}
+    @@all.sort_by{|song| song.name.downcase.split.map{|x| @@alphabet.index[x] }}
   end
 
   def self.find_by_name(name)
