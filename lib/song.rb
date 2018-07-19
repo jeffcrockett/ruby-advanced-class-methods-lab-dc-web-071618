@@ -50,7 +50,7 @@ class Song
       return self.find_by_name(name)
     end
   end
-binding.pry
+# binding.pry
 
   def self.new_from_filename(filename)
     parsed_filename = filename.split(' - ')
