@@ -24,6 +24,12 @@ class Song
     new_song
   end
 
+  def self.create_by_name(value)
+    new_song = Song.create
+    new_song.name = value
+    new_song
+  end
+
   def self.destroy_all
     @@all.clear
   end
